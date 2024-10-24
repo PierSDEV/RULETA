@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulace Rulety</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simulace Rulety</h1>
+        <div id="roulette-table">
+            <div class="roulette-wheel">
+                <div class="ball"></div>
+            </div>
+            <div class="betting-section">
+                <h2>Vaše sázka</h2>
+                <input type="number" id="bet-amount" placeholder="Částka sázky">
+                <select id="bet-type">
+                    <option value="number">Číslo (0 - 36)</option>
+                    <option value="red">Červená</option>
+                    <option value="black">Černá</option>
+                </select>
+                <input type="number" id="bet-number" placeholder="Vyberte číslo (0 - 36)" style="display:none;">
+                <button onclick="placeBet()">Umístit sázku</button>
+                <div id="bet-info"></div>
+                <button onclick="spinRoulette()">Roztočit ruletu</button>
+            </div>
+            <div class="result-section">
+                <h2>Výsledek:</h2>
+                <div id="roulette-result"></div>
+                <div id="win-loss"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
